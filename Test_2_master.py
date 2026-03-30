@@ -294,3 +294,245 @@ def starGrid(rows, cols):
         for j in range(cols):
             print("*", end=" ")
         print()
+
+
+# ============================================================
+# Q1 – Count Digits
+# ============================================================
+def countDigits(s):
+    """Returns number of digits in a string."""
+    count = 0
+    for ch in s:
+        if '0' <= ch <= '9':
+            count += 1
+    return count
+
+# ============================================================
+# Q2 – Sum and Count
+# ============================================================
+def sumAndCount(lst):
+    """Returns sum and count of list values."""
+    total = 0
+    count = 0
+    for num in lst:
+        total += num
+        count += 1
+    return total, count
+
+# ============================================================
+# Q3 – Positives (new list)
+# ============================================================
+def positives(lst):
+    """Returns a new list of positive numbers."""
+    new_list = []
+    for num in lst:
+        if num > 0:
+            new_list.append(num)
+    return new_list
+
+# ============================================================
+# Q4 – Sum Even Index
+# ============================================================
+def sumEvenIndex(lst):
+    """Returns sum of elements at even indexes."""
+    total = 0
+    for i in range(len(lst)):
+        if i % 2 == 0:
+            total += lst[i]
+    return total
+
+# ============================================================
+# Q5 – Replace 'a'
+# ============================================================
+def replaceA(s):
+    """Replaces 'a' with '*' in a string."""
+    result = ""
+    for ch in s:
+        if ch == 'a':
+            result += '*'
+        else:
+            result += ch
+    return result
+
+# ============================================================
+# Q6 – Manual Length
+# ============================================================
+def myLen(s):
+    """Returns length of string without len()."""
+    count = 0
+    for _ in s:
+        count += 1
+    return count
+
+# ============================================================
+# Q7 – Running Total
+# ============================================================
+def runningTotal(lst):
+    """Returns cumulative sum list."""
+    result = []
+    total = 0
+    for num in lst:
+        total += num
+        result.append(total)
+    return result
+
+# ============================================================
+# Q8 – Count Positive Even
+# ============================================================
+def countPosEven(lst):
+    """Counts numbers that are positive and even."""
+    count = 0
+    for num in lst:
+        if num > 0 and num % 2 == 0:
+            count += 1
+    return count
+
+# ============================================================
+# Q9 – First Negative
+# ============================================================
+def firstNegative(lst):
+    """Returns first negative number or None."""
+    for num in lst:
+        if num < 0:
+            return num
+    return None
+
+# ============================================================
+# Q10 – Sort Two Values
+# ============================================================
+def sortTwo(a, b):
+    """Returns two values in ascending order."""
+    if a < b:
+        return [a, b]
+    else:
+        return [b, a]
+
+# ============================================================
+# Q11 – Count Consonants
+# ============================================================
+def countConsonants(s):
+    """Counts consonants in a string."""
+    count = 0
+    for ch in s:
+        if ('A' <= ch <= 'Z' or 'a' <= ch <= 'z') and ch not in "aeiouAEIOU":
+            count += 1
+    return count
+
+# ============================================================
+# Q12 – Multiply List
+# ============================================================
+def multiplyList(lst):
+    """Returns product of all numbers in a list."""
+    result = 1
+    for num in lst:
+        result *= num
+    return result
+
+# ============================================================
+# Q13 – Largest Even
+# ============================================================
+def largestEven(lst):
+    """Returns largest even number or None."""
+    largest = None
+    for num in lst:
+        if num % 2 == 0:
+            if largest is None or num > largest:
+                largest = num
+    return largest
+
+# ============================================================
+# Q14 – Remove Zeros
+# ============================================================
+def removeZeros(lst):
+    """Returns new list without zeros."""
+    new_list = []
+    for num in lst:
+        if num != 0:
+            new_list.append(num)
+    return new_list
+
+# ============================================================
+# Q15 – Count Words
+# ============================================================
+def countWords(s):
+    """Counts number of words in a string."""
+    count = 1
+    for ch in s:
+        if ch == ' ':
+            count += 1
+    return count
+
+# ============================================================
+# Q16 – Palindrome Check
+# ============================================================
+def isPalindrome(s):
+    """Returns True if string is palindrome."""
+    left = 0
+    right = len(s) - 1
+    while left < right:
+        if s[left] != s[right]:
+            return False
+        left += 1
+        right -= 1
+    return True
+
+# ============================================================
+# Q17 – Double Alternate
+# ============================================================
+def doubleAlternate(lst):
+    """Doubles elements at even indexes."""
+    for i in range(len(lst)):
+        if i % 2 == 0:
+            lst[i] *= 2
+
+# ============================================================
+# Q18 – Count Above Average
+# ============================================================
+def countAboveAvg(lst):
+    """Counts values above average."""
+    total = 0
+    for num in lst:
+        total += num
+    avg = total / len(lst)
+    count = 0
+    for num in lst:
+        if num > avg:
+            count += 1
+    return count
+
+# ============================================================
+# Q19 – Merge Lists
+# ============================================================
+def mergeLists(lst1, lst2):
+    """Returns new list combining two lists."""
+    new_list = []
+    for item in lst1:
+        new_list.append(item)
+    for item in lst2:
+        new_list.append(item)
+    return new_list
+
+# ============================================================
+# Q20 – Second Largest
+# ============================================================
+def secondLargest(lst):
+    """Returns second largest value."""
+    largest = lst[0]
+    second = lst[0]
+    for num in lst:
+        if num > largest:
+            second = largest
+            largest = num
+        elif num > second and num != largest:
+            second = num
+    return second
+
+
+
+
+
+
+
+
+
+        
