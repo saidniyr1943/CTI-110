@@ -234,8 +234,14 @@ def createWord(lis):
 #
 #=============================================================================
 #what if dictionary was reversed
+etm=dict()
+for key in mte:
+    value= mte[key]
+    print(key,va;ue)
+    etm[value]=key
 
-
+print(mte)
+print(etm)
 
 #=============================================================================
 # q10 - create function dupWords() 
